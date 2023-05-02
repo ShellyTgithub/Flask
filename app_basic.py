@@ -25,7 +25,7 @@ def square(number):
     """ Route to process a url int parameter inside html!
     """
     squared = number ** 2
-    return f"URL Parameter: {str(number)} -> {str(squared)}"
+    return f"URL Parameter: {number} -> {squared}"
 
 @app.route("/html/<name>")
 def say_hello_page(name):
@@ -36,7 +36,7 @@ def say_hello_page(name):
     </head>
     <body>
     <h1>Name Page</h1>
-    <p>Hello {name}</p>
+    <p>Hello {name.upper()}</p>
     </body>
     </html>
     """
